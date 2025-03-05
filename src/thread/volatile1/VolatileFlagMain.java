@@ -19,8 +19,8 @@ public class VolatileFlagMain {
 
     static class MyTask implements Runnable {
 
-        boolean runFlag = true;
-        //volatile boolean runFlag = true;
+        //boolean runFlag = true; // 캐시 메모리를 사용
+        volatile boolean runFlag = true; // 메인 메모리에 직접 접근, 캐시 메모리를 사용할 때 보다 성능은 떨어짐
 
         @Override
         public void run() {
