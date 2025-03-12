@@ -13,6 +13,7 @@ public class IncrementThreadMain {
         test(new BasicInteger());
         test(new VolatileInteger()); //volatile 을 사용해도 여전히 충돌이 발생한다.
         test(new SyncInteger()); // synchronized 또는 lock 을 사용해서 안전한 임계 영역을 만들어야 한다.
+        test(new MyAtomicInteger());
     }
 
     private static void test(IncrementInteger incrementInteger) throws InterruptedException {
