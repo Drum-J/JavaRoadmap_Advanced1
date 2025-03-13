@@ -4,12 +4,8 @@ import static util.MyLogger.log;
 
 public class SimpleListMainV2 {
     public static void main(String[] args) throws InterruptedException {
-        SimpleList list = new BasicList();
-        list.add("A");
-        list.add("B");
-        System.out.println("list = " + list);
-
-        test(new BasicList());
+        //test(new BasicList());
+        test(new SyncList());
     }
 
     private static void test(SimpleList list) throws InterruptedException {
