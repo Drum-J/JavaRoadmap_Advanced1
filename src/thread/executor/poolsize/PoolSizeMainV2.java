@@ -20,7 +20,7 @@ public class PoolSizeMainV2 {
         for (int i = 1; i <= 6; i++) {
             String taskName = "task" + i;
             es.execute(new RunnableTask(taskName));
-            printState(es);
+            printState(es, taskName);
         }
 
         es.close();
